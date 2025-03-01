@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <!-- Google font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- DaisyUi and Tailwind Css CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/1d5b89be9d.js" crossorigin="anonymous"></script>
+
+    <!-- Custom Css for Font -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .poppins {
+                font-family: "Poppins", serif;
+            }
+        }
+    </style>
+</head>
+
+<body class="poppins bg-[#F4F7FF]">
+    <!--? Heading -->
+    <header>
+        <nav class="max-w-[1536px] mx-auto  rounded-2xl bg-white">
+            <div class="flex justify-between items-center p-5">
+                <!--? Logo And brand name -->
+                <div class="flex items-center p-4 space-x-3">
+                    <div class="w-[52px] h-[52px]">
+                        <img class="w-full" src="assets/logo.png" alt="">
+                    </div>
+                    <div class="text-[2rem] font-light text-[#00303C]">Dev<span class="font-bold">Board</span></div>
+                </div>
+
+                <button id="back-desk-btn" class="btn bg-[#3752FD] text-white">Back To Desk</button>
+
+            </div>
+        </nav>
+    </header>
+
+    <!--? Blog Content -->
+    <main class="max-w-[1536px] mx-auto ">
+
+        <h1 class="text-[2rem] font-bold text-black text-center pt-6">Blogs</h1>
+
+        <!--! Question 1 -->
+        <div class="bg-white rounded-2xl p-5 my-5">
+            <h1 class="text-2xl font-semibold">Question-1: What are the different ways to select an element in the DOM?
+            </h1>
+            <p class="border-b-[2px] border-[#3752fd33] border-dashed my-4"></p>
+            <p class="text-lg">getElementById(): একটি নির্দিষ্ট আইডি কে ধরতে ইউজ করা হয়।
+                উদাহরণ: document.getElementById("IdName") <br>
+
+                getElementsByClassName(): নির্দিষ্ট ক্লাস নাম কে ধরতে ইউজ করা হয়।
+                উদাহরণ: document.getElementsByClassName("className") <br>
+
+                getElementsByTagName(): নির্দিষ্ট ট্যাগ নাম কে ধরতে ইউজ করা হয়।
+                উদাহরণ: document.getElementsByTagName("div") <br>
+
+                querySelector(): query সিলেক্টর ব্যবহার করে শুধু প্রথম class/id/tag কে ধরা যায়।
+                উদাহরণ: document.querySelector(".ClassName") <br>
+
+                querySelectorAll(): query সিলেক্টর ব্যবহার করে শুধু সব class/id/tag কে ধরা যায়।
+                উদাহরণ: document.querySelectorAll(".ClassName")</p>
+        </div>
+
+        <!--! Question 2 -->
+        <div class="bg-white rounded-2xl p-5 my-5">
+            <h1 class="text-2xl font-semibold">Question-2: What is the difference between innerHTML, innerText, and
+                textContent ?
+            </h1>
+            <p class="border-b-[2px] border-[#3752fd33] border-dashed my-4"></p>
+            <p class="text-lg">innerHTML: কোন একটি ট্যাগ সিলেক্ট করে তার মধ্যে কি কি এলিমেন্ট আছে সেগুলো দেখা যায়। <br>
+
+                innerText: এটি শুধু ট্যাগের ভিতর থাকা text গুলোকে রিটার্ন করবে। <br>
+
+                textContent: এটি ভিতরের সব লেখা দেখাবে।</p>
+        </div>
+
+        <!--! Question 3 -->
+        <div class="bg-white rounded-2xl p-5 my-5">
+            <h1 class="text-2xl font-semibold">Question-3: What is event delegation in the DOM?
+            </h1>
+            <p class="border-b-[2px] border-[#3752fd33] border-dashed my-4"></p>
+            <p class="text-lg">Event delegation is a technique where you attach a single event listener to a parent
+                element, and then the event is caught when triggered by any child element. <br> This way, we don't need
+                to attach event listeners to each child element, which is especially useful when elements are
+                dynamically added or removed.</p>
+        </div>
+
+        <!--! Question 4 -->
+        <div class="bg-white rounded-2xl p-5 my-5">
+            <h1 class="text-2xl font-semibold">Question-4: What is event bubbling in the DOM?
+            </h1>
+            <p class="border-b-[2px] border-[#3752fd33] border-dashed my-4"></p>
+            <p class="text-lg">Event bubbling is a process where an event that is triggered on a child element
+                propagates upwards to its parent elements. <br>
+                It starts from the target element and moves up through the DOM tree, triggering event listeners on
+                parent elements. <br>
+
+                For example, if you click on a button, the event will first be caught by the button element, then its
+                parent element, and so on up the DOM tree.</p>
+        </div>
+
+        <!--! Question 5 -->
+        <div class="bg-white rounded-2xl p-5 my-5">
+            <h1 class="text-2xl font-semibold">Question-5: How do you create, add, and remove elements using JavaScript?
+            </h1>
+            <p class="border-b-[2px] border-[#3752fd33] border-dashed my-4"></p>
+            <p class="text-lg">1-Creating an element: example::-> <br>
+                let newElement = document.createElement('div');
+                newElement.textContent = "Hello, World!";
+
+                <br><br>
+
+                2-Adding an element: You can add a new element using appendChild() or insertBefore().example::-> <br>
+                document.body.appendChild(newElement); // Adds the new element to the body
+
+                <br><br>
+
+                3-Removing an element: To remove an element, you use removeChild().
+                example::-> <br>
+
+                let parent = document.getElementById('parentElement');
+                let child = document.getElementById('childElement');
+                parent.removeChild(child); // Removes childElement
+            </p>
+        </div>
+
+    </main>
+
+    <!--? Java Script -->
+    <script src="script/main.js"></script>
+    <script>
+        document.getElementById('back-desk-btn').addEventListener('click', function () {
+            window.location.href = 'index.html';
+            // alert('Back to home page');
+        });
+    </script>
+</body>
+
+</html>
